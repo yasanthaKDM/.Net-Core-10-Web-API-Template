@@ -21,5 +21,30 @@ namespace Net_Core_10_Web_API.Controllers
             var users = await _userService.GetAllUsersAsync();
             return Ok(users);
         }
+
+        [HttpPost]
+        public async Task<ActionResult<User>> CreateUser([FromBody] User user)
+        {
+            if (user == null) return BadRequest();
+            var created = await _userService.CreateUserAsync(user);
+            return Created(string.Empty, created);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<User>> UpdateUser(int id, [FromBody] User user)
+        {
+            if (user == null || id != user.Id) return BadRequest();
+            var updated = await _userService.UpdateUserAsync(user);
+            if (updated == null) return NotFound();
+            return Ok(updated);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            var deleted = await _userService.DeleteUserAsync(id);
+            if (!deleted) return NotFound();
+            return NoContent();
+        }
     }
 }

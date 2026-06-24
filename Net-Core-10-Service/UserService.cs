@@ -16,5 +16,20 @@ namespace Net_Core_10_Service
         {
             return await _userRepo.GetAllUsersAsync();
         }
+
+        public async Task<User> CreateUserAsync(User user)
+        {
+            return await _userRepo.CreateUserAsync(user);
+        }
+
+        public async Task<User> UpdateUserAsync(User user)
+        {
+            return await _userRepo.UpdateUserAsync(user);
+        }
+
+        public async Task<bool> DeleteUserAsync(int id)
+        {
+            return await _userRepo.DeleteUserAsync(id);
+        }
     }
 }
