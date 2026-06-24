@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Net-Core-10-Data/Net-Core-10-Data.csproj" Id="f02b09da-a978-4ce5-a4d4-76ee757b417e" />
   <Project Path="Net-Core-10-Domain/Net-Core-10-Domain.csproj" Id="5cee4973-2a71-4f67-9b65-050108f6592b" />
   <Project Path="Net-Core-10-Repository/Net-Core-10-Repository.csproj" Id="2a329446-917d-41e8-ac9e-64567a8f5d53" />
   <Project Path="Net-Core-10-Service/Net-Core-10-Service.csproj" Id="2704d86b-7daa-4448-96e4-509d71228f13" />
