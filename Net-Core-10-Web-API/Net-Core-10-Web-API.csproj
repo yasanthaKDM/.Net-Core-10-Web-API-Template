@@ -22,6 +22,7 @@
     <ProjectReference Include="..\Net-Core-10-Data\Net-Core-10-Data.csproj" />
     <ProjectReference Include="..\Net-Core-10-Domain\Net-Core-10-Domain.csproj" />
     <ProjectReference Include="..\Net-Core-10-Repository\Net-Core-10-Repository.csproj" />
+    <ProjectReference Include="..\Net-Core-10-ServiceContract\Net-Core-10-ServiceContract.csproj" />
     <ProjectReference Include="..\Net-Core-10-Service\Net-Core-10-Service.csproj" />
   </ItemGroup>
 

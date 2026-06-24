@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Net_Core_10_Domain.Data;
 using Net_Core_10_Domain.IRepository;
 using Net_Core_10_Domain.IService;
+using Net_Core_10_ServiceContract;
 
 namespace Net_Core_10_Web_API.Controllers
 {
@@ -16,14 +17,14 @@ namespace Net_Core_10_Web_API.Controllers
             _userService = userService;
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetAll()
+        public async Task<ActionResult<IEnumerable<UserDTO>>> GetAll()
         {   
             var users = await _userService.GetAllUsersAsync();
             return Ok(users);
         }
 
         [HttpPost]
-        public async Task<ActionResult<User>> CreateUser([FromBody] User user)
+        public async Task<ActionResult<UserDTO>> CreateUser([FromBody] UserDTO user)
         {
             if (user == null) return BadRequest();
             var created = await _userService.CreateUserAsync(user);
@@ -31,9 +32,9 @@ namespace Net_Core_10_Web_API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<User>> UpdateUser(int id, [FromBody] User user)
+        public async Task<ActionResult<UserDTO>> UpdateUser(int id, [FromBody] UserDTO user)
         {
-            if (user == null || id != user.Id) return BadRequest();
+            if (user == null) return BadRequest();
             var updated = await _userService.UpdateUserAsync(user);
             if (updated == null) return NotFound();
             return Ok(updated);

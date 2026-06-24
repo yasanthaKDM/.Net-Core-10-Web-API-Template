@@ -11,4 +11,8 @@
     <ProjectReference Include="..\Net-Core-10-Domain\Net-Core-10-Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Mappers\" />
+  </ItemGroup>
+
 </Project>

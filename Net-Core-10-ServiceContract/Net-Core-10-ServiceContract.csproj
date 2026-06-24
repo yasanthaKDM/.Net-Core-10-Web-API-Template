@@ -2,13 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <RootNamespace>Net_Core_10_Domain</RootNamespace>
+    <RootNamespace>Net_Core_10_ServiceContract</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Net-Core-10-ServiceContract\Net-Core-10-ServiceContract.csproj" />
-  </ItemGroup>
 
 </Project>

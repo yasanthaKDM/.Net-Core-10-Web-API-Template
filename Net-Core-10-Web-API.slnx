@@ -3,5 +3,6 @@
   <Project Path="Net-Core-10-Domain/Net-Core-10-Domain.csproj" Id="5cee4973-2a71-4f67-9b65-050108f6592b" />
   <Project Path="Net-Core-10-Repository/Net-Core-10-Repository.csproj" Id="2a329446-917d-41e8-ac9e-64567a8f5d53" />
   <Project Path="Net-Core-10-Service/Net-Core-10-Service.csproj" Id="2704d86b-7daa-4448-96e4-509d71228f13" />
+  <Project Path="Net-Core-10-ServiceContract/Net-Core-10-ServiceContract.csproj" Id="91c068cf-b058-4750-a17a-dbbb9b943ec3" />
   <Project Path="Net-Core-10-Web-API/Net-Core-10-Web-API.csproj" />
 </Solution>
