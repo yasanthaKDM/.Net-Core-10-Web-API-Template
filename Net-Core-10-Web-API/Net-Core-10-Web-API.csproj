@@ -9,6 +9,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.16.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Net-Core-10-Domain\Net-Core-10-Domain.csproj" />
+    <ProjectReference Include="..\Net-Core-10-Repository\Net-Core-10-Repository.csproj" />
+    <ProjectReference Include="..\Net-Core-10-Service\Net-Core-10-Service.csproj" />
   </ItemGroup>
 
 </Project>
