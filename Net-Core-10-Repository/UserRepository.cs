@@ -1,12 +1,22 @@
-﻿using Net_Core_10_Domain.IRepository;
+﻿using Microsoft.EntityFrameworkCore;
+using Net_Core_10_Data;
+using Net_Core_10_Domain.Data;
+using Net_Core_10_Domain.IRepository;
 
 namespace Net_Core_10_Repository
 {
     public class UserRepository : IUserRepository
     {
-        public async Task<List<string>> GetAllUsersAsync()
+        private readonly AppDbContext _context;
+        
+        public UserRepository(AppDbContext context)
         {
-            return new List<string> { "Alice", "Bob", "Charlie" };
+            _context = context;
+        }
+
+        public async Task<List<User>> GetAllUsersAsync()
+        {
+            return await _context.Users.ToListAsync<User>();
         }
     }
 }

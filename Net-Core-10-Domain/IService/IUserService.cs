@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Net_Core_10_Domain.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,6 @@ namespace Net_Core_10_Domain.IService
 {
     public interface IUserService
     {
-        public Task<List<string>> GetAllUsersAsync();
+        public Task<List<User>> GetAllUsersAsync();
     }
 }
